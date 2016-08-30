@@ -1,0 +1,25 @@
+##############    INSTRUÇÕES    ############## 
+
+----------------------------------------------
+- O codigo funciona no Ubuntu (Linux)
+- O compilador utilizado foi o g++
+
+----------------------------------------------
+Codigos:
+	codigo para compilação:
+	   $ g++ main.cpp -o compilador
+
+	codigo para execução:
+	   $ ./compilador -p teste
+
+----------------------------------------------
+Parametros:
+	Especificar caminho:
+	   -p <caminho> 
+
+	Ativar a saida do analizador lexico:
+	   -l
+	
+	Ajuda:
+	   --h
+----------------------------------------------
