@@ -14,65 +14,76 @@
 *
 */
 
-class Estado {
-	private:
-		int	indice;
-		string mensagem;
-		bool isFinal;
-        bool retroceder;
-        bool verificar;
-        bool erro;
-		
-	public:
-		int getIndice(){
-			return this->indice;
-		}
+class Estado
+{
+private:
+    int indice;
+    string mensagem;
+    bool isFinal;
+    bool retroceder;
+    bool verificar;
+    bool erro;
 
-		bool getIsFinal(){
-			return this->isFinal;
-		}
+public:
+    int getIndice()
+    {
+        return this->indice;
+    }
 
-		void setIndice(int indice){
-			this->indice = indice;
-		}
+    bool getIsFinal()
+    {
+        return this->isFinal;
+    }
 
-		void setIsFinal(bool isFinal){
-			this->isFinal = isFinal;
-		}
+    void setIndice(int indice)
+    {
+        this->indice = indice;
+    }
 
-		bool getRetroceder(){
-			return this->retroceder;
-		}
+    void setIsFinal(bool isFinal)
+    {
+        this->isFinal = isFinal;
+    }
 
-		void setRetroceder(bool retroceder){
-			this->retroceder = retroceder;
-		}
+    bool getRetroceder()
+    {
+        return this->retroceder;
+    }
 
-		bool getVerificar(){
-			return this->verificar;
-		}
+    void setRetroceder(bool retroceder)
+    {
+        this->retroceder = retroceder;
+    }
 
-		void setErro(bool erro){
-			this->erro = erro;
-		}
+    bool getVerificar()
+    {
+        return this->verificar;
+    }
 
-		bool getErro(){
-			return this->erro;
-		}
+    void setErro(bool erro)
+    {
+        this->erro = erro;
+    }
 
-		string getMensagem(){
-			return this->mensagem;
-		}
+    bool getErro()
+    {
+        return this->erro;
+    }
 
-		Estado(int indice, bool isFinal, bool retroceder, bool verificar, bool erro, string mensagem){
-			this->indice = indice;
-			this->isFinal = isFinal;
-			this->retroceder = retroceder;
-			this->verificar = verificar;
-			this->erro = erro;
-			this->mensagem = mensagem;
-		}
+    string getMensagem()
+    {
+        return this->mensagem;
+    }
 
-		Estado(){}
+    Estado(int indice, bool isFinal, bool retroceder, bool verificar, bool erro, string mensagem)
+    {
+        this->indice = indice;
+        this->isFinal = isFinal;
+        this->retroceder = retroceder;
+        this->verificar = verificar;
+        this->erro = erro;
+        this->mensagem = mensagem;
+    }
 
+    Estado() {}
 };

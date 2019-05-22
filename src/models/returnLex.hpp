@@ -46,4 +46,8 @@ class returnLex{
 			cout<<this->cadeia<<this->token<<this->line<<endl;
 		}
 
+        bool isEqual(string token) {
+            return this->getToken() == token;
+        }
+
 };

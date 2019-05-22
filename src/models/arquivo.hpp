@@ -14,51 +14,58 @@
 *
 */
 
-class Arquivo{
-	private:
+class Arquivo
+{
+private:
+    string url;
+    FILE *arquivo;
+    int linha;
 
-		string url;
-		FILE *arquivo;
-		int linha;
-	
-	public:
+public:
+    void abrirArquivo()
+    {
+        const char *caminho = url.c_str();
+        this->arquivo = fopen(caminho, "rw+");
+        if (this->arquivo == NULL)
+        {
+            cout << "Erro, nao foi possivel abrir o arquivo(" << url << ")!";
+            exit(0);
+        }
+    }
 
-		void abrirArquivo(){
-			const char *caminho = url.c_str();
-			this->arquivo = fopen(caminho, "rw+");
-			if(this->arquivo == NULL){
-				cout<<"Erro, nao foi possivel abrir o arquivo("<<url<<")!";
-				exit(0);
-			}
-		}
+    void fecharArquivo()
+    {
+        fclose(arquivo);
+    }
 
-		void fecharArquivo(){
-			fclose(arquivo);
-		}
+    char proximaLetra()
+    {
+        fgetc(arquivo);
+    }
 
-		char proximaLetra(){
-			fgetc(arquivo);
-		}
+    void incrementaLinha()
+    {
+        this->linha++;
+    }
 
-		void incrementaLinha(){
-			this->linha++;
-		}
+    int getLinha()
+    {
+        return this->linha;
+    }
 
-		int getLinha(){
-			return this->linha;
-		}
+    void setUrl(string url)
+    {
+        this->url = url;
+    }
 
-		void setUrl(string url){
-			this->url = url;
-		}
+    string getUrl()
+    {
+        return this->url;
+    }
 
-		string getUrl(){
-			return this->url;
-		}
-
-		Arquivo(string url){
-			this->url = url;
-			this->linha = 1;
-		}
-
+    Arquivo(string url)
+    {
+        this->url = url;
+        this->linha = 1;
+    }
 };
