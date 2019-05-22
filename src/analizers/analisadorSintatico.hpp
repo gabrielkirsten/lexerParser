@@ -525,11 +525,11 @@ void analiseSintatica(){
 
 	consomeToken();	
 	program();//program é o primeiro buscado
+	
 	while(tokenLex.getToken() != "EOF"){
 		numeroDeErros++;
 		cout<<"Token encontrado fora do escopo do programa: "<<tokenLex.getCadeia()<<endl;
 		consomeToken();
 	}
-
 
 }
