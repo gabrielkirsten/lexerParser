@@ -14,7 +14,7 @@ Sistema Operacional: Ubuntu 16.04 LTS
 
 Software desenvolvido para disciplina de Compiladores II.
 
-#Descrição da atividade
+## Descrição da atividade
 Implementar analisador SINTÁTICO utilizando a linguagem algorítmica LALGOL
 Método: Análise Sintática Descendente Preditiva Recursiva
 Descrição da linguagem: Arquivo linguagem lalgol.pdf no site
@@ -25,7 +25,7 @@ Tratamento de erros:
 Pânico – Ponto confiável para continuar a análise sintática – Análise da Linguagem LALGOL
 
 ------------------------------------------------------------------------
-#Utilização
+## Utilização
 	codigo para compilação:
 	   $ g++ main.cpp -o compilador
 
@@ -33,7 +33,7 @@ Pânico – Ponto confiável para continuar a análise sintática – Análise d
 	   $ ./compilador -p teste
 
 ------------------------------------------------------------------------		
-#Estrutura de diretórios
+## Estrutura de diretórios
     .
     |-- lexerParser
     |	|-- analisadorLexico.h (biblioteca criada para o lexer)
@@ -51,7 +51,7 @@ Pânico – Ponto confiável para continuar a análise sintática – Análise d
 	--h                             Ajuda
 
 ------------------------------------------------------------------------
-#Descrição da linguagem LALGOL
+## Descrição da linguagem LALGOL
 
 	1. <programa> ::= program ident ; <corpo> .
 	2. <corpo> ::= <dc> begin <comandos> end
